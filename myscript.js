@@ -5,7 +5,7 @@ if (window.XMLHttpRequest) {
 	request=new ActiveXObject("Microsoft.XMLHTTP");
 }
 
-request.open('GET', 'https://grakha.github.io/data.json');
+request.open('GET', 'data.json');
 request.onreadystatechange = function() {
 	if ((request.status === 200) &&
 		(request.readyState === 4)) {
