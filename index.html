@@ -13,6 +13,7 @@
 <!-- <h2>Links</h2> -->
 <!-- <ol id="links"> -->
 <!-- </ol> -->
+
 <script id="speakerstpl" type="text/template">
 	{{#speakers}}
 		<div class="speaker">
@@ -28,15 +29,16 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.cycle/3.0.3/jquery.cycle.all.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/mustache.js/2.2.1/mustache.min.js"></script>
 
-<script>
+<script type="text/javascript">
 	
-	$(function() {
-		$.getJSON('data.json', function(data) {
-			var template = $('#speakerstpl').html();
-			var html = Mustache.to_html(template, data);
-			$('#carusel').html(html);
-		}); //getJSON
-	}); //function
+$(function() {
+
+	$.getJSON('data.json', function(data) {
+		var template = $('#speakerstpl').html();
+		var html = Mustache.to_html(template, data);
+		$('#carousel').html(html);
+	}); //getJSON
+}); //function
 
 </script>
 <!-- <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script> -->
