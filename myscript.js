@@ -5,13 +5,14 @@ if (window.XMLHttpRequest) {
 	request=new ActiveXObject("Microsoft.XMLHTTP");
 }
 
-request.open('GET', 'data.json');
+request.open('GET', 'https://grakha.github.io/data.json');
 request.onreadystatechange = function() {
 	if ((request.status === 200) &&
 		(request.readyState === 4)) {
 
 
-				var info = JSON.parse(request.responseText);
+			var info = JSON.parse(request.responseText);
+			
 			var output='';
 			for (var i = 0; i <= info.links.length-1; i++) {
 				for (key in info.links[i]) {
