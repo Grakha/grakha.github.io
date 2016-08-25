@@ -53,7 +53,7 @@
 // For Jquery
 // $(document).ready(function() {
 
-// 	$.getJSON('data.json', function(info){
+// 	$.getJSON('data_small.json', function(info){
 
 // 		var output='';
 // 		for (var i = 0; i <= info.links.length-1; i++) {
@@ -71,5 +71,5 @@
 // 		update.innerHTML = output;
 
 // 	}); // get JSON
-	
+
 // }); // ready
