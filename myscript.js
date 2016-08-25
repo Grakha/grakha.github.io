@@ -14,7 +14,7 @@ request.onreadystatechange = function() {
 			var info = JSON.parse(request.responseText);
 			
 			var output='';
-			for (var i = 0; i <= info.links.length-1; i++) {
+			for (var i = 0; i < info.links.length; i++) {
 				for (key in info.links[i]) {
 					if (info.links[i].hasOwnProperty(key)) {
 						output += '<li>' + 
