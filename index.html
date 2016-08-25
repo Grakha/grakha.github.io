@@ -15,12 +15,12 @@
 <!-- </ol> -->
 <script id="speakerstpl" type="text/template">
 	{{#speakers}}
-	<div class="speaker">
-		<img src="images/{{shortname}}_tn.jpg" alt="Photo of {{name}}"/>
-		<h3>{{name}}</h3>
-		<h4>{{reknown}}</h4>
-		<p>{{bio}}</p>
-	</div>
+		<div class="speaker">
+			<img src="images/{{shortname}}_tn.jpg" alt="Photo of {{name}}" />
+			<h3>{{name}}</h3>
+			<h4>{{reknown}}</h4>
+			<p>{{bio}}</p>
+		</div>
 	{{/speakers}}
 </script>
 
@@ -32,7 +32,7 @@
 	
 	$(function() {
 		$.getJSON("data.json", function(data) {
-			var tamplate = $("#template").html();
+			var template = $("#template").html();
 			var html = Mustache.to_html(template, data);
 			$("#carusel").html(html);
 		}); //getJSON
