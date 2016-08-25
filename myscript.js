@@ -51,12 +51,12 @@
 
 
 // For Jquery
-$(document).ready(function(){
+$(document).ready(function() {
 
-	$.getJSON('data.json', function(info) {
+	$.getJSON("data.json", function(info) {
 
 		var output='';
-		for (var i = 0; i < info.links.length; i++) {
+		for (var i = 0; i <= info.links.length-1; i++) {
 			for (key in info.links[i]) {
 				if (info.links[i].hasOwnProperty(key)) {
 					output += '<li>' + 
@@ -69,6 +69,6 @@ $(document).ready(function(){
 		
 		var update = document.getElementById('links');
 		update.innerHTML = output;
-				
+
 	}); // get JSON
 }); // ready
